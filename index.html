@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KSTUDIO — Создаем сайты, которые приносят заявки</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- SONGER Grotesque подключается через @font-face в style.css (нужны файлы шрифта) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="#" class="logo">
+                    <div class="logo__icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <img src="img/лого.svg" alt="">
+                    </div>
+                    KSTUDIO
+                </a>
+                <nav class="nav">
+                    <a href="#cases" class="nav__link">Кейсы</a>
+                    <a href="#team" class="nav__link">Команда</a>
+                    <a href="#process" class="nav__link">Этапы</a>
+                    <a href="#services" class="nav__link">Услуги</a>
+                    <a href="#contact" class="nav__link">Контакты</a>
+                </nav>
+                <button class="burger" aria-label="Меню">
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- BURGER MENU -->
+    <div class="burger-menu" id="burgerMenu">
+        <nav class="burger-menu__nav">
+            <a href="#cases" class="burger-menu__link">Кейсы</a>
+            <a href="#team" class="burger-menu__link">Команда</a>
+            <a href="#process" class="burger-menu__link">Этапы</a>
+            <a href="#services" class="burger-menu__link">Услуги</a>
+            <a href="#contact" class="burger-menu__link">Контакты</a>
+        </nav>
+    </div>
+
+    <div class="page-top">
+    <!-- HERO -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero__chips">
+                <span class="hero__chip">Запоминающийся дизайн</span>
+                <span class="hero__chip">Убедительные тексты</span>
+                <span class="hero__chip">Эффективное продвижение</span>
+                <span class="hero__chip">Понятная структура</span>
+            </div>
+            <h1 class="hero__title">
+                <span class="hero__title-desktop">Разрабатываем сайты<br>Любой сложности<br>под ключ</span>
+                <span class="hero__title-mobile">Разрабатываем<br>сайты Любой<br>сложности<br>под ключ</span>
+            </h1>
+            <a href="#contact" class="btn btn--dark hero__cta">Рассчитать стоимость проекта</a>
+        </div>
+    </section>
+
+    <!-- BENEFITS -->
+    <section class="benefits">
+        <div class="container">
+            <p class="section-label">[ ПРЕИМУЩЕСТВА ]</p>
+            <h2 class="benefits__title">
+                <span class="benefits__title-desktop">СОЗДАДИМ ИНСТРУМЕНТ,<br> КОТОРЫЙ ПОВЫСИТ ДОВЕРИЕ КЛИЕНТА</span>
+                <span class="benefits__title-mobile">СОЗДАДИМ ИНСТРУМЕНТ,<br>КОТОРЫЙ ПОВЫСИТ<br><span class="benefits__title-mobile-r">ДОВЕРИЕ КЛИЕНТА</span></span>
+                <span class="benefits__title-l2">И ВЛИЯНИЕ В НИШЕ</span>
+            </h2>
+            <div class="benefits__grid">
+                <div class="benefit-card">
+                    <span class="benefit-card__num">01</span>
+                    <h3>УВЕЛИЧЕНИЕ КОНВЕРСИИ</h3>
+                    <p>Каждая деталь направлена на&nbsp;решение проблемы пользователя и&nbsp;повышение интереса к&nbsp;продукту.</p>
+                </div>
+                <div class="benefit-card">
+                    <span class="benefit-card__num">02</span>
+                    <h3>ОСМЫСЛЕННЫЙ КОПИРАЙТИНГ</h3>
+                    <p>Заголовки с&nbsp;конкретной выгодой, работа с&nbsp;возражениями, чёткие призывы к&nbsp;действию.</p>
+                </div>
+                <div class="benefit-card">
+                    <span class="benefit-card__num">03</span>
+                    <h3>ЦЕННОСТИ БРЕНДА</h3>
+                    <p>Сформулируем позиционирование и&nbsp;объясним так, чтобы это поняли и&nbsp;захотели купить.</p>
+                </div>
+                <div class="benefit-card">
+                    <span class="benefit-card__num">04</span>
+                    <h3>ПРОДВИЖЕНИЕ</h3>
+                    <p>Показываем объявления тем, кто ищет ваши услуги. Снижаем стоимость заявки, а&nbsp;не просто «приводим трафик».</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </div><!-- /.page-top -->
+
+    <!-- CASES -->
+    <section class="cases" id="cases">
+        <div class="cases__half cases__half--dark" style="background-image: url('img/фон 1.png'); background-size: cover; background-position: center;">
+            <div class="case-card" data-case="1">
+                <div class="case-card__img">
+                    <img src="img/ке1с 1.svg" alt="Кейс 1">
+                </div>
+                <div class="case-card__plate">
+                    <div class="case-card__info">
+                        <p class="case-card__name">FLOWER LOVE</p>
+                        <p class="case-card__type">Дизайн интернет-магазина</p>
+                    </div>
+                    <div class="case-card__icons">
+                        <img src="img/фигма.svg" alt="Figma">
+                    </div>
+                </div>
+                <div class="case-card__hover">Смотреть кейс</div>
+            </div>
+        </div>
+        <div class="cases__half cases__half--light" style="background-image: url('img/фон 2.png'); background-size: cover; background-position: center;">
+            <div class="case-card" data-case="2">
+                <div class="case-card__img">
+                    <img src="img/кейс 2.svg" alt="Кейс 2">
+                </div>
+                <div class="case-card__plate">
+                    <div class="case-card__info">
+                        <p class="case-card__name">ОХ, НЕЖНО</p>
+                        <p class="case-card__type">Интернет-магазин</p>
+                    </div>
+                    <div class="case-card__icons">
+                        <img src="img/фигма.svg" alt="Figma">
+                        <img src="img/тильда.svg" alt="Tilda">
+                    </div>
+                </div>
+                <div class="case-card__hover">Смотреть кейс</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CASE MODAL -->
+    <div class="case-modal" id="caseModal">
+        <div class="case-modal__overlay"></div>
+        <button class="case-modal__close-outer">
+            <img src="img/модалка.svg" alt="Закрыть">
+        </button>
+        <div class="case-modal__box">
+            <div class="case-modal__scroll">
+                <div class="case-modal__content" id="caseModalContent">
+                    <!-- контент появится позже -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- TEAM -->
+    <section class="team" id="team">
+        <div class="container">
+            <p class="section-label">[ КОМАНДА ]</p>
+            <p class="team__desc">Мы слаженная команда, где каждый отвечает<br class="desktop-br">за свою зону. За счёт этого<br class="mobile-br"> мы держим <br class="desktop-br">качество и короткие сроки.</p>
+            <!-- MOBILE ONLY: хинт -->
+            <div class="team__hint team__hint--mobile">
+                <span class="team__hint-bubble">Нажми</span>
+                <img src="img/стрелка.svg" alt="" class="team__hint-arrow">
+            </div>
+            <!-- MOBILE ONLY: общая фотка команды -->
+            <div class="team__mobile-photo-wrap">
+                <img src="img/members_for_mobile.png" alt="Команда" class="team__mobile-photo">
+                <span class="team__mobile-name" data-member="саша">САША<img class="member-info-btn" src="img/для команды рядом с именем.svg" alt="info"
+                    data-name="Александр Панков"
+                    data-role="Менеджер"
+                    data-row="bottom"
+                    data-desc="Слежу за сроками, собираю требования и веду проект от первой встречи до сдачи. Вы не думаете о процессе — я обо всём позабочусь."></span>
+                <span class="team__mobile-name" data-member="ксюша">КСЮША<img class="member-info-btn" src="img/для команды рядом с именем.svg" alt="info"
+                    data-name="Ксения Третьякова"
+                    data-role="Веб-дизайнер, копирайтер"
+                    data-row="top"
+                    data-desc="Отвечаю за визуал сайта, структуру и текст. Презентую ваш продукт так, чтобы его поняли, почувствовали и захотели купить."></span>
+                <span class="team__mobile-name" data-member="лиза">ЛИЗА<img class="member-info-btn" src="img/для команды рядом с именем.svg" alt="info"
+                    data-name="Елизавета Третьякова"
+                    data-role="Разработчик"
+                    data-row="bottom"
+                    data-desc="Делаю сайты на Тильде и чистом коде. Настраиваю анимацию и подключаю сервисы. Делаю сайты быстрыми и удобными на любом устройстве."></span>
+                <span class="team__mobile-name" data-member="боря">БОРЯ<img class="member-info-btn" src="img/для команды рядом с именем.svg" alt="info"
+                    data-name="Борис Ахадов"
+                    data-role="Разработчик"
+                    data-row="top"
+                    data-desc="Пишу сайты на чистом коде. Провожу аудирование информационных систем на безопасность. А также тестирую и слежу за качеством работы сайта."></span>
+                <span class="team__mobile-name" data-member="рустэм">РУСТЭМ<img class="member-info-btn" src="img/для команды рядом с именем.svg" alt="info"
+                    data-name="Рустэм Рамазанов"
+                    data-role="Маркетолог"
+                    data-row="bottom"
+                    data-desc="Настраиваю и веду рекламу. Снижаю стоимость заявки, нахожу каналы, которые работают. Делаю так, чтобы реклама окупалась."></span>
+            </div>
+
+            <div class="team__grid">
+                <div class="team__hint">
+                    <span class="team__hint-bubble">Нажми</span>
+                    <img src="img/стрелка.svg" alt="" class="team__hint-arrow">
+                </div>
+                <!-- Саша — левый -->
+                <div class="team-member team-member--sm team-member--left">
+                    <img class="team-member__photo" src="img/саша30 1.png" alt="Саша">
+                    <span class="team-member__name">САША<img class="member-info-btn" src="img/для команды рядом с именем.svg" alt="info"
+                        data-name="Александр Панков"
+                        data-role="Менеджер"
+                        data-row="bottom"
+                        data-desc="Слежу за сроками, собираю требования и веду проект от первой встречи до сдачи. Вы не думаете о процессе — я обо всём позабочусь."></span>
+                </div>
+                <!-- Ксюша — правый -->
+                <div class="team-member team-member--lg team-member--right">
+                    <img class="team-member__photo" src="img/ксюща30 2.png" alt="Ксюша">
+                    <span class="team-member__name">КСЮША<img class="member-info-btn" src="img/для команды рядом с именем.svg" alt="info"
+                        data-name="Ксения Третьякова"
+                        data-role="Веб-дизайнер, копирайтер"
+                        data-row="top"
+                        data-desc="Отвечаю за визуал сайта, структуру и текст. Презентую ваш продукт так, чтобы его поняли, почувствовали и захотели купить."></span>
+                </div>
+                <!-- Лиза — левый -->
+                <div class="team-member team-member--md team-member--left">
+                    <img class="team-member__photo" src="img/лиза30 1.png" alt="Лиза">
+                    <span class="team-member__name">ЛИЗА<img class="member-info-btn" src="img/для команды рядом с именем.svg" alt="info"
+                        data-name="Елизавета Третьякова"
+                        data-role="Разработчик"
+                        data-row="bottom"
+                        data-desc="Делаю сайты на Тильде и чистом коде. Настраиваю анимацию и подключаю сервисы. Делаю сайты быстрыми и удобными на любом устройстве."></span>
+                </div>
+                <!-- Боря — правый -->
+                <div class="team-member team-member--lg team-member--right">
+                    <img class="team-member__photo" src="img/Боря30 1.png" alt="Боря">
+                    <span class="team-member__name">БОРЯ<img class="member-info-btn" src="img/для команды рядом с именем.svg" alt="info"
+                        data-name="Борис Ахадов"
+                        data-role="Разработчик"
+                        data-row="top"
+                        data-desc="Пишу сайты на чистом коде. Провожу аудирование информационных систем на безопасность. А также тестирую и слежу за качеством работы сайта."></span>
+                </div>
+                <!-- Рустэм — левый -->
+                <div class="team-member team-member--lg team-member--left">
+                    <img class="team-member__photo" src="img/рустэм30 2.png" alt="Рустэм">
+                    <span class="team-member__name">РУСТЭМ<img class="member-info-btn" src="img/для команды рядом с именем.svg" alt="info"
+                        data-name="Рустэм Рамазанов"
+                        data-role="Маркетолог"
+                        data-row="bottom"
+                        data-desc="Настраиваю и веду рекламу. Снижаю стоимость заявки, нахожу каналы, которые работают. Делаю так, чтобы реклама окупалась."></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="process" id="process">
+        <div class="container">
+            <p class="section-label">[ ЭТАПЫ РАБОТЫ НАД ПРОЕКТОМ ]</p>
+            <div class="process-slider">
+                <button class="slider-arrow slider-arrow--prev" aria-label="Назад">
+                    <img src="img/для вопроса.svg" alt="">
+                </button>
+                <div class="slider-track-wrap">
+                    <div class="slider-track">
+                        <div class="process-card">
+                            <div class="process-card__img">
+                                <img src="img/карточка 1.png" alt="">
+                                <span class="process-card__badge">15 МИНУТ</span>
+                            </div>
+                            <div class="process-card__body">
+                                <h3>1. Консультация</h3>
+                                <p>Проведём консультацию онлайн. Обсудим задачу сайта, определим, какой сайт&nbsp;нужен.</p>
+                            </div>
+                        </div>
+                        <div class="process-card">
+                            <div class="process-card__img">
+                                <img src="img/карточка 2.png" alt="">
+                                <span class="process-card__badge">1 ДЕНЬ</span>
+                            </div>
+                            <div class="process-card__body">
+                                <h3>2. Договор <br>и предоплата</h3>
+                                <p>Зафиксируем сроки, объём и стоимость работы. Подписываем договор, вносите предоплату&nbsp;30%.</p>
+                            </div>
+                        </div>
+                        <div class="process-card">
+                            <div class="process-card__img">
+                                <img src="img/карточка 3.png" alt="">
+                                <span class="process-card__badge">1-4 ДНЯ</span>
+                            </div>
+                            <div class="process-card__body">
+                                <h3>3. Анализ аудитории <br>и конкурентов</h3>
+                                <p>Выясним, что важно клиентам. Посмотрим на конкурентов и&nbsp;их слабые места. Если есть сайт — разберём ошибки.</p>
+                                <p>Соберём в синтез: выводы и&nbsp;готовые идеи для вашего сайта.</p>
+                            </div>
+                        </div>
+                        <div class="process-card">
+                            <div class="process-card__img">
+                                <img src="img/карточка 4.png" alt="">
+                                <span class="process-card__badge">1–4 ДНЯ</span>
+                            </div>
+                            <div class="process-card__body">
+                                <h3>4. Прототип</h3>
+                                <p>Сделаем схему сайта: какие блоки, в каком порядке.</p>
+                                <p>Пропишем тексты на сайте: цепляющие заголовки, подзаголовки, призывы к&nbsp;действию, ответы на&nbsp;возражения.</p>
+                                <p>Утвердим текст и&nbsp;структуру.</p>
+                            </div>
+                        </div>
+                        <div class="process-card">
+                            <div class="process-card__img">
+                                <img src="img/карточка 5.png" alt="">
+                                <span class="process-card__badge">2–7 ДНЕЙ</span>
+                            </div>
+                            <div class="process-card__body">
+                                <h3>5. Дизайн-концепция</h3>
+                                <p>Покажем 3 концепции дизайна первого экрана. После этого сделаем полный макет всех страниц сайта. По ходу работы есть возможность вносить&nbsp;правки.</p>
+                                <p>В результате макет сайта, готовый к&nbsp;вёрстке.</p>
+                            </div>
+                        </div>
+                        <div class="process-card">
+                            <div class="process-card__img">
+                                <img src="img/карточка 6.png" alt="">
+                                <span class="process-card__badge">2–14 ДНЕЙ</span>
+                            </div>
+                            <div class="process-card__body">
+                                <h3>6. Вёрстка, тестирование сайта</h3>
+                                <p>Сверстаем сайт. Настроим адаптив, анимацию, формы, отправку&nbsp;заявок.</p>
+                                <p>Подключим домен, SSL, счётчики&nbsp;аналитики.</p>
+                                <p>Проверим сайт на&nbsp;работоспособность.</p>
+                            </div>
+                        </div>
+                        <div class="process-card">
+                            <div class="process-card__img">
+                                <img src="img/карточка 7.png" alt="">
+                                <span class="process-card__badge">3–7 ДНЕЙ</span>
+                            </div>
+                            <div class="process-card__body">
+                                <h3>7. Настройка рекламы</h3>
+                                <p>Соберём ключевые слова и&nbsp;минус-слова. Настроим кампании в&nbsp;Яндексе, подготовим до&nbsp;10 вариантов объявлений. Запустим тест на&nbsp;5 дней.</p>
+                                <p>Результат: рекламный кабинет с&nbsp;работающими кампаниями и&nbsp;целями.</p>
+                            </div>
+                        </div>
+                        <div class="process-card">
+                            <div class="process-card__img">
+                                <img src="img/карточка 8.png" alt="">
+                                <span class="process-card__badge">ПОМЕСЯЧНО</span>
+                            </div>
+                            <div class="process-card__body">
+                                <h3>8. Ведение рекламы</h3>
+                                <p>Ежедневно смотрим статистику. Отключаем неэффективные объявления. Меняем ставки, тестируем новые&nbsp;заголовки.</p>
+                                <p>Результат: цена заявки постепенно снижается. Вы видите, куда уходят деньги, и&nbsp;можете планировать бюджет.</p>
+                            </div>
+                        </div>
+                        <div class="process-card">
+                            <div class="process-card__img">
+                                <img src="img/карточка 9.png" alt="">
+                                <span class="process-card__badge">ПОМЕСЯЧНО</span>
+                            </div>
+                            <div class="process-card__body">
+                                <h3>9. SEO-продвижение</h3>
+                                <p>Проведём SEO-аудит, соберём семантику, оптимизируем контент, разместим статьи на&nbsp;проверенных площадках.</p>
+                                <p>Результат: сайт выходит в&nbsp;топ по&nbsp;целевым запросам, растёт бесплатный поисковый трафик, снижается зависимость от&nbsp;платной рекламы.</p>
+                            </div>
+                        </div>
+                        <div class="process-card">
+                            <div class="process-card__img">
+                                <img src="img/карточка 10.png" alt="">
+                                <span class="process-card__badge">ПО ДОГОВОРЁННОСТИ</span>
+                            </div>
+                            <div class="process-card__body">
+                                <h3>10. Поддержка сайта</h3>
+                                <p>Обновляем и наполняем контент.</p>
+                                <p>Анализируем Яндекс.Метрику, тестируем гипотезы, дорабатываем&nbsp;сайт.</p>
+                                <p>В итоге получаем — лучший результат для вашего&nbsp;бизнеса.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="slider-arrow slider-arrow--next" aria-label="Вперёд">
+                    <img src="img/для вопроса.svg" alt="">
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <div class="services-wrapper" id="services">
+    <section class="services" id="services">
+        <img class="services__bg" src="img/фон для услуг.svg" alt="">
+        <div class="services__header">
+            <div class="container">
+                <p class="section-label">[ УСЛУГИ ]</p>
+            </div>
+        </div>
+
+        <div class="services-stack">
+
+            <!-- Карточка 1: Сайты (синяя + фон) -->
+            <div class="service-card-wrap">
+                <div class="container">
+                    <div class="service-card service-card--blue">
+                        <div class="service-items">
+                            <div class="service-item">
+                                <h3>ЛЕНДИНГ</h3>
+                                <p>Идеален, если у вас один товар, одна услуга, акция, курс, вебинар или&nbsp;запуск.</p>
+                                <div class="service-item__meta">
+                                    <span>от 5 дней</span>
+                                    <span>от 36 000 р.</span>
+                                </div>
+                            </div>
+                            <div class="service-item">
+                                <h3>КОРПОРАТИВНЫЙ САЙТ</h3>
+                                <p>Сайт-визитка, который показывает вашу экспертизу, команду, кейсы и&nbsp;вызывает доверие у&nbsp;дорогих клиентов.</p>
+                                <div class="service-item__meta">
+                                    <span>от 12 дней</span>
+                                    <span>от 46 000 р.</span>
+                                </div>
+                            </div>
+                            <div class="service-item">
+                                <h3>ИНТЕРНЕТ-МАГАЗИН</h3>
+                                <p>Сайт с каталогом, корзиной, онлайн-оплатой и&nbsp;личным кабинетом. Перестаньте зависеть от&nbsp;маркетплейсов и&nbsp;их комиссий, соберите свою клиентскую&nbsp;базу.</p>
+                                <div class="service-item__meta">
+                                    <span>от 12 дней</span>
+                                    <span>от 54 000 р.</span>
+                                </div>
+                            </div>
+                            <div class="service-item">
+                                <h3>САЙТ ПОД КЛЮЧ «ОТ РАЗРАБОТКИ ДО ЗАЯВОК»</h3>
+                                <p>Экономите время, нервы и&nbsp;деньги. В результате — готовый сайт, который приводит&nbsp;клиентов.</p>
+                                <div class="service-item__meta">
+                                    <span>от 14 дней</span>
+                                    <span>от 59 000 р.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Карточка 2: Дизайн + вёрстка (светлая) -->
+            <div class="service-card-wrap">
+                <div class="container">
+                    <div class="service-card service-card--light">
+                        <div class="service-items">
+                            <div class="service-item">
+                                <h3>ДИЗАЙН САЙТА</h3>
+                                <p>Разработаем дизайн-макет в&nbsp;Figma — без вёрстки. Для тех, у кого есть свой разработчик или кто хочет сначала утвердить&nbsp;визуал.</p>
+                                <div class="service-item__meta">
+                                    <span>от 3 дней</span>
+                                    <span>По договорённости</span>
+                                </div>
+                            </div>
+                            <div class="service-item">
+                                <h3>ВЁРСТКА</h3>
+                                <p>Возьмём ваш дизайн в&nbsp;Figma и&nbsp;превратим в&nbsp;рабочий сайт. Адаптив под все устройства, анимации, формы. Верстаем на&nbsp;чистом коде или с&nbsp;интеграцией в&nbsp;Tilda, WordPress, Битрикс.</p>
+                                <div class="service-item__meta">
+                                    <span>от 3 дней</span>
+                                    <span>По договорённости</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Карточка 3: Продвижение (синяя) -->
+            <div class="service-card-wrap">
+                <div class="container">
+                    <div class="service-card service-card--blue">
+                        <div class="service-items">
+                            <div class="service-item">
+                                <h3>ПРОДВИЖЕНИЕ ЯНДЕКС.БИЗНЕС</h3>
+                                <p>Запускаем и&nbsp;ведём рекламу в&nbsp;Яндекс.Бизнесе. Цель — снизить стоимость заявки и&nbsp;получить стабильный поток клиентов с&nbsp;карт.</p>
+                                <div class="service-item__meta">
+                                    <span>от 5 дней</span>
+                                    <span>от 20 000 р.</span>
+                                </div>
+                                <small>[ Рекламный бюджет оплачивается отдельно ]</small>
+                            </div>
+                            <div class="service-item">
+                                <h3>ПРОДВИЖЕНИЕ ЯНДЕКС.ДИРЕКТ</h3>
+                                <p>Запускаем и&nbsp;ведём рекламу в&nbsp;Яндекс.Директе. Цель — снизить стоимость заявки и&nbsp;получить стабильный поток клиентов из&nbsp;поиска.</p>
+                                <div class="service-item__meta">
+                                    <span>от 5 дней</span>
+                                    <span>от 27 000 р.</span>
+                                </div>
+                                <small>[ Рекламный бюджет оплачивается отдельно ]</small>
+                            </div>
+                            <div class="service-item">
+                                <h3>SEO-ПРОДВИЖЕНИЕ</h3>
+                                <p>Выводим сайт в&nbsp;топ Яндекса по&nbsp;согласованным запросам. Результат — дешёвый трафик на&nbsp;месяцы и&nbsp;годы.</p>
+                                <div class="service-item__meta">
+                                    <span>Помесячно</span>
+                                    <span>60 000 р.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Карточка 4: Аудит + поддержка (светлая) -->
+            <div class="service-card-wrap service-card-wrap--last">
+                <div class="container">
+                    <div class="service-card service-card--light">
+                        <div class="service-items">
+                            <div class="service-item">
+                                <h3>АУДИТ САЙТА И РЕКЛАМЫ</h3>
+                                <p>Диагностируем, почему сайт не продаёт или реклама дорогая. Даём конкретные рекомендации по&nbsp;улучшению.</p>
+                                <div class="service-item__meta">
+                                    <span>от 3 дней</span>
+                                    <span>15 000 р.</span>
+                                </div>
+                            </div>
+                            <div class="service-item">
+                                <h3>ПОДДЕРЖКА САЙТА</h3>
+                                <p>Поможем сохранить работу сайта стабильной, актуальной и&nbsp;эффективной для&nbsp;бизнеса.</p>
+                                <div class="service-item__meta">
+                                    <span>По договорённости</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="services__cta">
+                <a href="#contact" class="btn btn--dark">Рассчитать стоимость проекта</a>
+            </div>
+
+        </div>
+    </section>
+    </div><!-- /.services-wrapper -->
+
+    <!-- FAQ -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <p class="section-label">[ ВОПРОСЫ ]</p>
+            <div class="faq__grid">
+                <!-- Левый столбец -->
+                <div class="faq__col">
+                    <div class="faq-item">
+                        <button class="faq-item__btn">
+                            <span>Какие дополнительные расходы могут быть по сайту?</span>
+                            <span class="faq-item__icon"><img src="img/для вопроса.svg" alt="" width="24" height="24"></span>
+                        </button>
+                        <div class="faq-item__answer">
+                            <ul>
+                                <li>Домен — от 200 ₽ за год.</li>
+                                <li>Хостинг — от 300 ₽ в месяц.</li>
+                                <li>Подписка на платформу — если сайт на Тильде/Битрикс/WordPress.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-item__btn">
+                            <span>Как работаем с правками?</span>
+                            <span class="faq-item__icon"><img src="img/для вопроса.svg" alt="" width="24" height="24"></span>
+                        </button>
+                        <div class="faq-item__answer">
+                            <p>На каждом этапе — тексты, дизайн, вёрстка — предусмотрен один пакет&nbsp;правок.</p>
+                            <p>Вы собираете все комментарии в&nbsp;одном сообщении, мы вносим изменения и&nbsp;показываем обновлённую версию.</p>
+                            <p>Если после согласованного пакета появляются новые пожелания или меняется сама задача, дополнительные правки оплачиваются&nbsp;отдельно.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-item__btn">
+                            <span>Что будет после сдачи сайта?</span>
+                            <span class="faq-item__icon"><img src="img/для вопроса.svg" alt="" width="24" height="24"></span>
+                        </button>
+                        <div class="faq-item__answer">
+                            <p>После запуска у вас есть 1 месяц бесплатной поддержки. В этот период&nbsp;мы:</p>
+                            <ul>
+                                <li>Отвечаем на вопросы.</li>
+                                <li>Помогаем разобраться с управлением сайтом.</li>
+                                <li>Подсказываем, как вносить базовые изменения.</li>
+                            </ul>
+                            <p>Бонус: дарим Гайд по управлению сайтом — как менять тексты, фото, добавлять товары и&nbsp;смотреть заявки.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-item__btn">
+                            <span>Вы учитываете юридические требования?</span>
+                            <span class="faq-item__icon"><img src="img/для вопроса.svg" alt="" width="24" height="24"></span>
+                        </button>
+                        <div class="faq-item__answer">
+                            <p>Да, мы обращаем внимание на юридические требования. Проверяем, чтобы при необходимости&nbsp;были:</p>
+                            <ul>
+                                <li>Политика конфиденциальности.</li>
+                                <li>Согласие на обработку персональных данных.</li>
+                                <li>Оферта или другие обязательные страницы.</li>
+                            </ul>
+                            <p>Если видим потенциальные риски, заранее предупреждаем и&nbsp;подсказываем, что лучше учесть.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-item__btn">
+                            <span>У вас есть опыт в моей нише?</span>
+                            <span class="faq-item__icon"><img src="img/для вопроса.svg" alt="" width="24" height="24"></span>
+                        </button>
+                        <div class="faq-item__answer">
+                            <p>Анализ даёт нам понимание вашей ниши. Изучаем бизнес-цели, конкурентов, запросы аудитории, ищем слабые места продукта. Делаем сайт не по шаблону, а под задачи вашего&nbsp;бизнеса.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Правый столбец -->
+                <div class="faq__col">
+                    <div class="faq-item">
+                        <button class="faq-item__btn">
+                            <span>Как происходит оплата?</span>
+                            <span class="faq-item__icon"><img src="img/для вопроса.svg" alt="" width="24" height="24"></span>
+                        </button>
+                        <div class="faq-item__answer">
+                            <p>Работа делится на 3 этапа:</p>
+                            <ul>
+                                <li>30% предоплата после согласования деталей и заключения договора.</li>
+                                <li>40% — после утверждения прототипа, когда уже готовы структура страниц и тексты.</li>
+                                <li>30% — после утверждения дизайна сайта.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-item__btn">
+                            <span>У меня нет текстов и фотографий. Это проблема?</span>
+                            <span class="faq-item__icon"><img src="img/для вопроса.svg" alt="" width="24" height="24"></span>
+                        </button>
+                        <div class="faq-item__answer">
+                            <p>Не проблема, мы поможем:</p>
+                            <ul>
+                                <li>Написать текст о компании.</li>
+                                <li>Структурировать информацию об услугах.</li>
+                                <li>Подскажем, какой визуальный контент подойдёт.</li>
+                                <li>Используем ваши материалы, если они уже есть.</li>
+                                <li>Подберём изображения, иллюстрации или референсы под стиль проекта.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-item__btn">
+                            <span>Смогу ли я потом самостоятельно редактировать сайт?</span>
+                            <span class="faq-item__icon"><img src="img/для вопроса.svg" alt="" width="24" height="24"></span>
+                        </button>
+                        <div class="faq-item__answer">
+                            <p>Да. Сайт передаётся вам, и вы сможете самостоятельно менять тексты, изображения, карточки товаров и&nbsp;другие базовые элементы.</p>
+                            <p>Чтобы вам было проще, мы даём инструкцию по управлению сайтом и&nbsp;при необходимости объясняем основные действия после&nbsp;запуска.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-item__btn">
+                            <span>Что будет, если мне не понравится результат?</span>
+                            <span class="faq-item__icon"><img src="img/для вопроса.svg" alt="" width="24" height="24"></span>
+                        </button>
+                        <div class="faq-item__answer">
+                            <p>Мы работаем поэтапно, поэтому результат не становится неожиданностью. Вы последовательно&nbsp;утверждаете:</p>
+                            <ul>
+                                <li>Прототип.</li>
+                                <li>Дизайн-концепцию.</li>
+                                <li>Ключевые страницы.</li>
+                                <li>Вёрстку перед финальной сдачей.</li>
+                            </ul>
+                            <p>За счёт этого сайт собирается постепенно, а итог получается предсказуемым и&nbsp;согласованным.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-item__btn">
+                            <span>Что нужно, чтобы начать работу?</span>
+                            <span class="faq-item__icon"><img src="img/для вопроса.svg" alt="" width="24" height="24"></span>
+                        </button>
+                        <div class="faq-item__answer">
+                            <p>Для старта нужно:</p>
+                            <ul>
+                                <li>Заполнить бриф.</li>
+                                <li>Созвониться или обсудить задачу в переписке.</li>
+                            </ul>
+                            <p>Если у вас нет готовых текстов, структуры или фото — это не останавливает работу, мы поможем с этим в&nbsp;процессе.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="contact__title">
+                <span class="ct-line l1">ОСТАВЬТЕ ЗАЯВКУ,</span>
+                <span class="ct-line l2">МЫ ПОМОЖЕМ РЕШИТЬ</span>
+                <span class="ct-line l3">ВАШУ ЗАДАЧУ</span>
+            </h2>
+            <div class="contact__body">
+                <!--
+                    ФОРМА: подключена через Formspree.
+                    Инструкция:
+                    1. Зарегистрируйтесь на formspree.io
+                    2. Создайте новую форму, укажите ваш email
+                    3. Получите ID вида: xpzvwqab
+                    4. Замените REPLACE_WITH_YOUR_ID на ваш ID
+                -->
+                <form class="contact-form" id="contactForm" action="https://formspree.io/f/xkoeqjqa" method="POST">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Имя" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" name="phone" placeholder="Телефон" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="telegram" placeholder="Ник в телеграме" required>
+                    </div>
+                    <label class="form-agree">
+                        <input type="checkbox" name="agree" required>
+                        <span>Принимаю условия соглашения и даю согласие на обработку своих персональных данных и условиях <a href="privacy.html" target="_blank">политики конфиденциальности</a></span>
+                    </label>
+                    <button type="submit" class="btn btn--dark btn--full">Оставить заявку</button>
+                    <p class="form-success" id="formSuccess">Заявка отправлена! Мы свяжемся с вами в ближайшее время.</p>
+                </form>
+                <div class="contact__bonus">
+                    <p class="bonus__title">В подарок получите 3 полезных файла:</p>
+                    <p><strong>Калькулятор эффективности сайта</strong> — покажет, сколько выручки ваш бизнес мог бы получать с сайтом.</p>
+                    <p><strong>Гайд «Нужен ли вашему бизнесу сайт?»</strong> — поймёте, в каких случаях сайт необходим, а когда можно обойтись.</p>
+                    <p><strong>Чек-лист «10 ошибок, из-за которых сайт теряет заявки»</strong> — узнаете, что именно мешает сайту приносить доход.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer__top">
+                <div class="footer__info">
+                    <p>Самозанятая Третьякова</p>
+                    <p>Ксения Александровна</p>
+                    <p>ИНН 524926456620</p>
+                    <p>dinara.komova@gmail.com</p>
+                </div>
+                <div class="footer__right">
+                    <a href="https://vk.com/kstudio.digital" target="_blank" rel="noopener" class="footer__vk" aria-label="ВКонтакте">
+                        <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+                            <circle cx="18" cy="18" r="18" fill="#1B2540"/>
+                            <path d="M19.1 24c-6.3 0-9.9-4.3-10-11.5h3.1c.1 5.1 2.4 7.3 4.1 7.8V12.5h3v4.5c1.7-.2 3.5-2.3 4.1-4.5h3c-.5 2.8-2.6 4.9-4 5.7 1.4.7 3.8 2.5 4.7 5.8h-3.3c-.7-2.2-2.5-3.9-4.5-4.1V24h-.2z" fill="white"/>
+                        </svg>
+                    </a>
+                    <a href="privacy.html" class="footer__policy">Политика конфиденциальности<br>и согласие на обработку ПД</a>
+                </div>
+            </div>
+        <div class="footer__logo-wrap">
+            <span class="footer__logo">KSTUDIO</span>
+        </div>
+        <a href="privacy.html" class="footer__policy-mobile">Политика конфиденциальности<br>и согласие на обработку ПД</a>
+    </footer>
+
+    <!-- Team member popup -->
+    <div class="member-popup" id="memberPopup" aria-hidden="true">
+        <h4 class="member-popup__name"></h4>
+        <p class="member-popup__role"></p>
+        <p class="member-popup__desc"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
