@@ -197,6 +197,49 @@ document.querySelectorAll('.member-info-btn').forEach(btn => {
     });
 });
 
+document.querySelectorAll('.team__mobile-name, .team-member__name').forEach(name => {
+    name.addEventListener('click', e => {
+        if (e.target.classList.contains('member-info-btn')) return;
+        e.stopPropagation();
+        const btn = name.querySelector('.member-info-btn');
+        if (!btn) return;
+
+        const isAlreadyOpen = memberPopup.classList.contains('visible')
+            && memberPopup.dataset.activeBtn === btn.dataset.name;
+        memberPopup.classList.remove('visible');
+        if (isAlreadyOpen) return;
+
+        memberPopup.querySelector('.member-popup__name').textContent = btn.dataset.name;
+        memberPopup.querySelector('.member-popup__role').textContent = btn.dataset.role;
+        memberPopup.querySelector('.member-popup__desc').textContent = btn.dataset.desc;
+        memberPopup.dataset.activeBtn = btn.dataset.name;
+
+        const rect = name.getBoundingClientRect();
+        const memberRect = (name.closest('.team-member') || name.closest('.team__mobile-photo-wrap')).getBoundingClientRect();
+        const scrollX = window.scrollX || window.pageXOffset;
+        const scrollY = window.scrollY || window.pageYOffset;
+        const popupW = 280;
+        const isTopRow = btn.dataset.row === 'top';
+
+        let left = memberRect.left + scrollX;
+        if (left + popupW > scrollX + window.innerWidth - 8) left = scrollX + window.innerWidth - 8 - popupW;
+        if (left < scrollX + 8) left = scrollX + 8;
+
+        memberPopup.style.left = left + 'px';
+        memberPopup.style.visibility = 'hidden';
+        memberPopup.classList.add('visible');
+
+        requestAnimationFrame(() => {
+            const popupH = memberPopup.offsetHeight;
+            const top = isTopRow
+                ? rect.bottom + scrollY + 8
+                : rect.top + scrollY - popupH - 8;
+            memberPopup.style.top = top + 'px';
+            memberPopup.style.visibility = 'visible';
+        });
+    });
+});
+
 document.addEventListener('click', () => memberPopup.classList.remove('visible'));
 memberPopup.addEventListener('click', e => e.stopPropagation());
 
@@ -313,6 +356,35 @@ memberPopup.addEventListener('click', e => e.stopPropagation());
     setTimeout(() => { init(); onScroll(); }, 300);
     window.addEventListener('resize', () => { init(); onScroll(); });
     window.addEventListener('scroll', onScroll, { passive: true });
+})();
+
+// Mobile services stack effect
+(function () {
+    function isMobile() { return window.innerWidth <= 430; }
+
+    const wraps = document.querySelectorAll('.service-card-wrap');
+    if (!wraps.length) return;
+
+    function update() {
+        if (!isMobile()) {
+            wraps.forEach(w => { w.style.transform = ''; });
+            return;
+        }
+        wraps.forEach((wrap, i) => {
+            const rect = wrap.getBoundingClientRect();
+            const next = wraps[i + 1];
+            if (!next) return;
+            const nextRect = next.getBoundingClientRect();
+            const overlap = rect.bottom - nextRect.top;
+            if (overlap > 0) {
+                wrap.style.zIndex = wraps.length - i;
+            }
+        });
+    }
+
+    window.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update);
+    update();
 })();
 
 // FAQ accordion — each item toggles independently
