@@ -1841,12 +1841,12 @@ a { text-decoration: none; color: inherit; }
     .services__cta .btn { width: 100%; }
 
     /* FAQ */
-    .faq { padding: 48px 0; height: 849px; margin-bottom: 80px;}
+    .faq { padding: 48px 0; height: auto; }
     .faq__grid { flex-direction: column; gap: 0; }
     .faq__col { gap: 10px; }
     .faq__col + .faq__col { margin-top: 10px; }
     .faq-item__btn { font-size: 15px; }
-    .faq-item--mb { margin-bottom: 80px; }
+    .faq-item--mb { margin-bottom: 0; }
 
     /* CONTACT */
     .contact { padding: 80px 0px 32px !important; }
