@@ -336,7 +336,7 @@ a { text-decoration: none; color: inherit; }
    ============================== */
 .cases {
     display: flex;
-    height: 623px;
+    height: 780px;
 }
 
 .cases__half {
@@ -983,7 +983,7 @@ a { text-decoration: none; color: inherit; }
 
 .process .section-label {
     padding-left: 0;
-    margin-bottom: 10px;
+    margin-bottom: 18px;
 }
 
 .process-slider {
@@ -1197,6 +1197,10 @@ a { text-decoration: none; color: inherit; }
 /* ==============================
    FAQ
    ============================== */
+.faq .section-label {
+    margin-bottom: 18px;
+}
+
 .faq {
     background: var(--white);
     padding: 96px 0;
@@ -1594,7 +1598,7 @@ a { text-decoration: none; color: inherit; }
     }
 
     .hero__chips {
-        margin-top: 190px;
+        margin-top: 50px;
         gap: 6px;
         width: 100%;
         flex-wrap: wrap;
@@ -1610,6 +1614,9 @@ a { text-decoration: none; color: inherit; }
         overflow: hidden;
         box-sizing: border-box;
         justify-content: center;
+    }
+    .hero__chip:nth-child(even) {
+        padding: 0 15px;
     }
 
     .hero__title {
@@ -1631,7 +1638,7 @@ a { text-decoration: none; color: inherit; }
 
     /* BENEFITS */
     .benefits { padding: 16px 0 48px; }
-    .benefits__title { font-size: 32px; }
+    .benefits__title { font-size: 32px; line-height: 1.15; }
     .benefits__title-desktop { display: none; }
     .benefits__title-mobile { display: block; }
     .mobile-br { display: inline; }
@@ -1651,6 +1658,7 @@ a { text-decoration: none; color: inherit; }
         justify-content: center;
     }
     .benefit-card__num { margin-bottom: 5px; }
+    .benefit-card:last-child { margin-bottom: 70px; }
     .benefit-card h3 { font-size: 20px; }
     .benefit-card p {
         font-size: 14px;
@@ -1671,13 +1679,13 @@ a { text-decoration: none; color: inherit; }
     .case-card__name { font-size: 22px; }
 
     /* TEAM */
-    .team { padding: 48px 0; }
+    .team { padding: 80px 0 48px; }
     .team__grid { display: none; }
     .team__mobile-photo-wrap {
         display: block;
         position: relative;
         width: 100%;
-  
+        margin-bottom: 50px;
     }
     .team__mobile-photo {
         width: 100%;
@@ -1827,14 +1835,15 @@ a { text-decoration: none; color: inherit; }
         position: static;
         overflow: visible;
         padding: 0 0 32px;
-        gap: 12px;
+        gap: 10px;
         height: auto;
         align-items: center;
         display: flex;
     }
     .service-card { width: 360px; }
-    .service-card-wrap { margin-bottom: 12px; }
+    .service-card-wrap { margin-bottom: 0; }
     .service-items { padding: 24px 20px; }
+    .service-item { margin-bottom: 28px; }
     .service-item h3 { font-size: 20px; }
     .service-item__meta { font-size: 16px; gap: 16px; }
     .service-item small { white-space: nowrap; font-size: 12px; }
@@ -1846,6 +1855,7 @@ a { text-decoration: none; color: inherit; }
     .faq__grid { flex-direction: column; gap: 0; }
     .faq__col { gap: 10px; }
     .faq__col + .faq__col { margin-top: 10px; }
+    .faq__col:last-child .faq-item:last-child { margin-bottom: 40px; }
     .faq-item__btn { font-size: 15px; }
     .faq-item--mb { margin-bottom: 0; }
 
@@ -1857,7 +1867,7 @@ a { text-decoration: none; color: inherit; }
     .ct-line.l3 { padding-left: 0; text-align: right; }
     .contact__body { flex-direction: column; gap: 24px; }
     .form-group input { width: 100%; height: 55px; }
-    .contact-form .btn { width: 100%; height: 55px; }
+    .contact-form .btn { width: 100%; height: 55px; margin-bottom: 40px; }
     .contact-form { width: 100%; margin-left: 0; }
     .contact__bonus {
         width: 100%;
