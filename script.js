@@ -150,98 +150,6 @@
     overlay.addEventListener('touchmove', e => { e.preventDefault(); }, { passive: false });
 })();
 
-// Team member popup
-const memberPopup = document.getElementById('memberPopup');
-
-document.querySelectorAll('.member-info-btn').forEach(btn => {
-    btn.addEventListener('click', e => {
-        e.stopPropagation();
-
-        const isAlreadyOpen = memberPopup.classList.contains('visible')
-            && memberPopup.dataset.activeBtn === btn.dataset.name;
-
-        memberPopup.classList.remove('visible');
-
-        if (isAlreadyOpen) return;
-
-        memberPopup.querySelector('.member-popup__name').textContent = btn.dataset.name;
-        memberPopup.querySelector('.member-popup__role').textContent = btn.dataset.role;
-        memberPopup.querySelector('.member-popup__desc').textContent = btn.dataset.desc;
-        memberPopup.dataset.activeBtn = btn.dataset.name;
-
-        const rect = btn.getBoundingClientRect();
-        const memberRect = (btn.closest('.team-member') || btn.closest('.team__mobile-photo-wrap')).getBoundingClientRect();
-        const scrollX = window.scrollX || window.pageXOffset;
-        const scrollY = window.scrollY || window.pageYOffset;
-        const popupW = 280;
-        const isTopRow = btn.dataset.row === 'top';
-
-        let left = memberRect.left + scrollX;
-        if (left + popupW > scrollX + window.innerWidth - 8) {
-            left = scrollX + window.innerWidth - 8 - popupW;
-        }
-        if (left < scrollX + 8) left = scrollX + 8;
-
-        memberPopup.style.left = left + 'px';
-        memberPopup.style.visibility = 'hidden';
-        memberPopup.classList.add('visible');
-
-        requestAnimationFrame(() => {
-            const popupH = memberPopup.offsetHeight;
-            const top = isTopRow
-                ? rect.bottom + scrollY + 8
-                : rect.top + scrollY - popupH - 8;
-            memberPopup.style.top = top + 'px';
-            memberPopup.style.visibility = 'visible';
-        });
-    });
-});
-
-document.querySelectorAll('.team__mobile-name, .team-member__name').forEach(name => {
-    name.addEventListener('click', e => {
-        if (e.target.classList.contains('member-info-btn')) return;
-        e.stopPropagation();
-        const btn = name.querySelector('.member-info-btn');
-        if (!btn) return;
-
-        const isAlreadyOpen = memberPopup.classList.contains('visible')
-            && memberPopup.dataset.activeBtn === btn.dataset.name;
-        memberPopup.classList.remove('visible');
-        if (isAlreadyOpen) return;
-
-        memberPopup.querySelector('.member-popup__name').textContent = btn.dataset.name;
-        memberPopup.querySelector('.member-popup__role').textContent = btn.dataset.role;
-        memberPopup.querySelector('.member-popup__desc').textContent = btn.dataset.desc;
-        memberPopup.dataset.activeBtn = btn.dataset.name;
-
-        const rect = name.getBoundingClientRect();
-        const memberRect = (name.closest('.team-member') || name.closest('.team__mobile-photo-wrap')).getBoundingClientRect();
-        const scrollX = window.scrollX || window.pageXOffset;
-        const scrollY = window.scrollY || window.pageYOffset;
-        const popupW = 280;
-        const isTopRow = btn.dataset.row === 'top';
-
-        let left = memberRect.left + scrollX;
-        if (left + popupW > scrollX + window.innerWidth - 8) left = scrollX + window.innerWidth - 8 - popupW;
-        if (left < scrollX + 8) left = scrollX + 8;
-
-        memberPopup.style.left = left + 'px';
-        memberPopup.style.visibility = 'hidden';
-        memberPopup.classList.add('visible');
-
-        requestAnimationFrame(() => {
-            const popupH = memberPopup.offsetHeight;
-            const top = isTopRow
-                ? rect.bottom + scrollY + 8
-                : rect.top + scrollY - popupH - 8;
-            memberPopup.style.top = top + 'px';
-            memberPopup.style.visibility = 'visible';
-        });
-    });
-});
-
-document.addEventListener('click', () => memberPopup.classList.remove('visible'));
-memberPopup.addEventListener('click', e => e.stopPropagation());
 
 // Process slider
 (function () {
@@ -253,35 +161,37 @@ memberPopup.addEventListener('click', e => e.stopPropagation());
 
     if (!wrap || !cards.length) return;
 
-    const visible = 3;
     const gap = 16;
+    const cardWidth = 333;
     let current = 0;
-    const max = cards.length - visible;
-
-    function cardW() {
-        return (wrap.offsetWidth - gap * (visible - 1)) / visible;
-    }
 
     function isMobile() { return window.innerWidth <= 430; }
 
+    function visibleCount() {
+        if (isMobile()) return 1;
+        return Math.floor((wrap.offsetWidth + gap) / (cardWidth + gap));
+    }
+
+    function max() { return Math.max(0, cards.length - visibleCount()); }
+
     function setWidths() {
         if (isMobile()) {
-            cards.forEach(c => { c.style.width = '305px'; c.style.height = 'auto'; });
+            cards.forEach(c => { c.style.width = '305px'; });
         } else {
-            const w = cardW();
-            cards.forEach(c => { c.style.width = w + 'px'; });
+            cards.forEach(c => { c.style.width = cardWidth + 'px'; });
         }
     }
 
     function move() {
         if (isMobile()) return;
-        track.style.transform = `translateX(-${current * (cardW() + gap)}px)`;
+        current = Math.min(current, max());
+        track.style.transform = `translateX(-${current * (cardWidth + gap)}px)`;
         prevBtn.disabled = current === 0;
-        nextBtn.disabled = current >= max;
+        nextBtn.disabled = current >= max();
     }
 
     prevBtn.addEventListener('click', () => { if (current > 0) { current--; move(); } });
-    nextBtn.addEventListener('click', () => { if (current < max) { current++; move(); } });
+    nextBtn.addEventListener('click', () => { if (current < max()) { current++; move(); } });
 
     setWidths();
     move();
