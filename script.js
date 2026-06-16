@@ -199,28 +199,6 @@
 })();
 
 // Scroll animations
-(function () {
-    const els = document.querySelectorAll('section:not(.services), footer');
-    const io = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                io.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.08 });
-
-    els.forEach(el => io.observe(el));
-
-    // Only add fade-up to elements not yet visible (below the fold)
-    requestAnimationFrame(() => {
-        els.forEach(el => {
-            if (!el.classList.contains('visible')) {
-                el.classList.add('fade-up');
-            }
-        });
-    });
-})();
 
 // Services scroll capture
 (function () {
@@ -297,10 +275,14 @@
     update();
 })();
 
-// FAQ accordion — each item toggles independently
+// FAQ accordion — one open at a time
+const faqItems = document.querySelectorAll('.faq-item');
 document.querySelectorAll('.faq-item__btn').forEach(btn => {
     btn.addEventListener('click', () => {
-        btn.closest('.faq-item').classList.toggle('open');
+        const item = btn.closest('.faq-item');
+        const isOpen = item.classList.contains('open');
+        faqItems.forEach(i => i.classList.remove('open'));
+        if (!isOpen) item.classList.add('open');
     });
 });
 
