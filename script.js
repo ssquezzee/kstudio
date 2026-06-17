@@ -169,7 +169,7 @@
 
     function visibleCount() {
         if (isMobile()) return 1;
-        return Math.floor((wrap.offsetWidth + gap) / (cardWidth + gap));
+        return 3;
     }
 
     function max() { return Math.max(0, cards.length - visibleCount()); }

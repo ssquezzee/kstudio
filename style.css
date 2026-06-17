@@ -254,14 +254,14 @@ a { text-decoration: none; color: inherit; }
 
 .benefits__grid {
     display: grid;
-    grid-template-columns: repeat(4, 260px);
-    justify-content: space-between;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
     align-items: start;
     padding-top: 0;
 }
 
 .benefit-card {
-    width: 260px;
+    width: 100%;
     height: 330px;
     border-radius: var(--r);
     padding: 24px 24px 28px;
@@ -827,7 +827,7 @@ a { text-decoration: none; color: inherit; }
    ============================== */
 .team {
     background: var(--white);
-    padding: 96px 0 0;
+    padding: 60px 0 120px;
     overflow: visible;
 }
 
@@ -835,7 +835,7 @@ a { text-decoration: none; color: inherit; }
     font-family: var(--font-h);
     font-size: 48px;
     font-weight: 400;
-    margin-top: 40px;
+    margin-top: 0;
     margin-bottom: 2px;
 }
 
@@ -852,24 +852,25 @@ a { text-decoration: none; color: inherit; }
     align-items: flex-start;
     gap: 20px;
     overflow: visible;
+    margin-bottom: -80px;
 }
 
 .team-card {
-    flex: 1;
+    flex: 0 0 292px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 /* чередование высоты: 1-й и 3-й — выше, 2-й и 4-й — ниже */
-.team-card:nth-child(1) { padding-top: 0; margin-left: -20px; }
+.team-card:nth-child(1) { padding-top: 0; }
 .team-card:nth-child(2) { padding-top: 80px; }
 .team-card:nth-child(3) { padding-top: 0; }
 .team-card:nth-child(4) { padding-top: 80px; margin-right: -20px; }
 
 .team-card__photo-wrap {
     position: relative;
-    width: 260px;
+    width: 292px;
     margin-bottom: 20px;
     display: flex;
     justify-content: center;
@@ -881,7 +882,7 @@ a { text-decoration: none; color: inherit; }
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 260px;
+    width: 292px;
     height: 310px;
     background: rgba(197, 217, 255, 0.3);
     border-radius: 20px;
@@ -917,7 +918,7 @@ a { text-decoration: none; color: inherit; }
     letter-spacing: 0.01em;
     margin-bottom: 4px;
     color: #141D3A;
-    width: 260px;
+    width: 292px;
     text-align: left;
 }
 
@@ -926,7 +927,7 @@ a { text-decoration: none; color: inherit; }
     font-weight: 400;
     margin-bottom: 10px;
     color: #141D3A;
-    width: 260px;
+    width: 292px;
     text-align: left;
 }
 
@@ -934,7 +935,7 @@ a { text-decoration: none; color: inherit; }
     font-size: 16px;
     line-height: 1.3;
     color: #141D3A;
-    width: 260px;
+    width: 292px;
     text-align: left;
 }
 
@@ -943,7 +944,7 @@ a { text-decoration: none; color: inherit; }
    ============================== */
 .process {
     background: #F5F7FF;
-    padding: 96px 0;
+    padding: 80px 0 60px;
 }
 
 .process__title {
@@ -983,6 +984,7 @@ a { text-decoration: none; color: inherit; }
     flex: 1;
     overflow: hidden;
     min-width: 0;
+    max-width: 1031px;
 }
 
 .slider-track {
@@ -1004,8 +1006,7 @@ a { text-decoration: none; color: inherit; }
 
 .process-card:nth-child(1),
 .process-card:nth-child(2) {
-    height: 308px;
-    overflow: hidden;
+    height: 379px;
 }
 
 .process-card__img {
@@ -1063,7 +1064,7 @@ a { text-decoration: none; color: inherit; }
 
 .services {
     background: #F5F7FF;
-    padding: 96px 0 80px;
+    padding: 60px 0 60px;
 }
 
 .services__title {
@@ -1135,7 +1136,7 @@ a { text-decoration: none; color: inherit; }
 
 .faq {
     background: var(--white);
-    padding: 80px 0;
+    padding: 60px 0 80px;
 }
 
 .faq__grid {
@@ -1226,7 +1227,7 @@ a { text-decoration: none; color: inherit; }
    ============================== */
 .contact {
     background: #F5F7FF;
-    padding: 67px;
+    padding: 67px 67px 80px;
     overflow: hidden;
 }
 
@@ -1515,13 +1516,10 @@ a { text-decoration: none; color: inherit; }
     /* HERO */
     .hero {
         min-height: unset;
-        height: 844px;
     }
 
     .hero .container {
-        padding-left: 20px;
-        padding-right: 20px;
-        padding-bottom: 272px;
+        padding: 100px 20px;
         box-sizing: border-box;
         width: 100%;
         min-height: unset;
@@ -1536,17 +1534,13 @@ a { text-decoration: none; color: inherit; }
     }
 
     .hero__chip {
-        flex: 0 0 calc(50% - 3px);
+        flex: none;
         font-size: 11px;
         height: 32px;
-        padding: 0 6px;
+        padding: 0 15px;
         white-space: nowrap;
-        overflow: hidden;
         box-sizing: border-box;
         justify-content: center;
-    }
-    .hero__chip:nth-child(even) {
-        padding: 0 15px;
     }
 
     .hero__title {
@@ -1588,8 +1582,8 @@ a { text-decoration: none; color: inherit; }
         justify-content: center;
     }
     .benefit-card__num { margin-bottom: 5px; }
-    .benefit-card:last-child { margin-bottom: 70px; }
-    .benefit-card h3 { font-size: 30px; }
+    .benefit-card:last-child { margin-bottom: 40px; }
+    .benefit-card h3 { font-size: 28px; }
     .benefit-card p {
         font-size: 14px;
         max-width: 305px;
@@ -1606,15 +1600,16 @@ a { text-decoration: none; color: inherit; }
     .case-card { width: 100%; max-width: 354px; }
     .case-card__img { height: 380px; overflow: hidden; }
     .case-card__img img { width: 100%; height: 100%; object-fit: cover; }
-    .case-card__name { font-size: 22px; }
+    .case-card__name { font-size: 32px; }
 
     /* TEAM */
-    .team { padding: 48px 0; }
-    .team__title { font-size: 36px; margin-bottom: 8px; }
+    .team { padding: 60px 0 !important; }
+    .team__title { font-size: 36px; margin-bottom: 0; }
     .team__desc { margin-bottom: 32px; }
     .team__grid {
         flex-direction: column;
         gap: 32px;
+        margin-bottom: 0;
     }
     .team-card {
         flex: none;
@@ -1645,7 +1640,7 @@ a { text-decoration: none; color: inherit; }
         padding-top: 0;
     }
     .team-card__photo-wrap::before {
-        width: 175px;
+        width: 175px !important;
         height: 223px;
         top: 50px;
         left: 50%;
@@ -1683,10 +1678,11 @@ a { text-decoration: none; color: inherit; }
     .team-card__name { line-height: 1.1; }
     .team-card__role { font-size: 15px; margin-bottom: 4px; width: auto; line-height: 1.2; }
     .team-card__desc { font-size: 14px; width: auto; line-height: 1.3; }
+    .team-card:nth-child(4) .team-card__desc { margin-bottom: 20px; }
 
     /* PROCESS */
     .process { padding: 70px 0 48px; }
-    .process__title { font-size: 36px; }
+    .process__title { font-size: 36px; line-height: 1; }
     .process__title-desktop { display: none; }
     .process__title-mobile { display: block; }
     .slider-arrow { display: none; }
@@ -1702,7 +1698,7 @@ a { text-decoration: none; color: inherit; }
     .process-card p { font-size: 13px; }
 
     /* SERVICES */
-    .services { padding: 60px 0 48px; }
+    .services { padding: 60px 0; }
     .services__title { font-size: 36px; margin-bottom: 24px; }
     .services-row__name { font-size: 24px; }
     .services-row {
@@ -1715,24 +1711,24 @@ a { text-decoration: none; color: inherit; }
     .services__cta .btn { width: 100%; }
 
     /* FAQ */
-    .faq { padding: 48px 0; height: auto; }
+    .faq { padding: 60px 0 0; height: auto; }
     .faq__title { font-size: 36px; }
     .faq__grid { flex-direction: column; gap: 0; }
     .faq__col { gap: 10px; }
     .faq__col + .faq__col { margin-top: 10px; }
-    .faq__col:last-child .faq-item:last-child { margin-bottom: 40px; }
+    .faq__col:last-child .faq-item:last-child { margin-bottom: 60px; }
     .faq-item__btn { font-size: 15px; }
     .faq-item--mb { margin-bottom: 0; }
 
     /* CONTACT */
-    .contact { padding: 80px 0px 32px !important; }
+    .contact { padding: 60px 0px !important; }
     .contact__title { font-size: 36px; margin-bottom: 32px; padding: 0; margin-left: 0; }
     .ct-line.l1 { text-align: left; }
     .ct-line.l2 { padding-left: 0; text-align: left; }
     .ct-line.l3 { padding-left: 0; text-align: right; }
     .contact__body { flex-direction: column; gap: 24px; }
     .form-group input { width: 100%; height: 55px; }
-    .contact-form .btn { width: 100%; height: 55px; margin-bottom: 40px; }
+    .contact-form .btn { width: 100%; height: 55px; }
     .contact-form { width: 100%; margin-left: 0; }
     .contact__bonus {
         width: 100%;
