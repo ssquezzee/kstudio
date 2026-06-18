@@ -162,10 +162,11 @@
     if (!wrap || !cards.length) return;
 
     const gap = 16;
-    const cardWidth = 333;
     let current = 0;
 
     function isMobile() { return window.innerWidth <= 430; }
+    function isLarge() { return window.innerWidth >= 1600; }
+    function cardWidth() { return isLarge() ? 440 : 333; }
 
     function visibleCount() {
         if (isMobile()) return 1;
@@ -178,14 +179,14 @@
         if (isMobile()) {
             cards.forEach(c => { c.style.width = '305px'; });
         } else {
-            cards.forEach(c => { c.style.width = cardWidth + 'px'; });
+            cards.forEach(c => { c.style.width = cardWidth() + 'px'; });
         }
     }
 
     function move() {
         if (isMobile()) return;
         current = Math.min(current, max());
-        track.style.transform = `translateX(-${current * (cardWidth + gap)}px)`;
+        track.style.transform = `translateX(-${current * (cardWidth() + gap)}px)`;
         prevBtn.disabled = current === 0;
         nextBtn.disabled = current >= max();
     }
