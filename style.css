@@ -158,7 +158,7 @@ a { text-decoration: none; color: inherit; }
     background: radial-gradient(ellipse 60% 40% at center 40%, #C5D9FF 0%, #F5F7FF 100%);
     display: flex;
     align-items: center;
-    padding: 60px 0 80px;
+    padding: 10px 0 80px;
 }
 
 .hero .container {
@@ -262,7 +262,7 @@ a { text-decoration: none; color: inherit; }
 
 .benefit-card {
     width: 100%;
-    height: 330px;
+    height: 350px;
     border-radius: var(--r);
     padding: 24px 24px 28px;
     overflow: hidden;
@@ -827,7 +827,7 @@ a { text-decoration: none; color: inherit; }
    ============================== */
 .team {
     background: var(--white);
-    padding: 60px 0 120px;
+    padding: 80px 0 120px;
     overflow: visible;
 }
 
@@ -944,7 +944,7 @@ a { text-decoration: none; color: inherit; }
    ============================== */
 .process {
     background: #F5F7FF;
-    padding: 80px 0 60px;
+    padding: 80px 0;
 }
 
 .process__title {
@@ -1064,7 +1064,7 @@ a { text-decoration: none; color: inherit; }
 
 .services {
     background: #F5F7FF;
-    padding: 60px 0 60px;
+    padding: 60px 0 100px;
 }
 
 .services__title {
@@ -1136,7 +1136,7 @@ a { text-decoration: none; color: inherit; }
 
 .faq {
     background: var(--white);
-    padding: 60px 0 80px;
+    padding: 80px 0 80px;
 }
 
 .faq__grid {
@@ -1519,7 +1519,7 @@ a { text-decoration: none; color: inherit; }
     }
 
     .hero .container {
-        padding: 40px 20px;
+        padding: 20px 20px 100px;
         box-sizing: border-box;
         width: 100%;
         min-height: unset;
