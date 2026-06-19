@@ -1504,7 +1504,7 @@ a { text-decoration: none; color: inherit; }
    ============================== */
 @media (min-width: 1700px) {
     .container { max-width: 1520px; }
-    .btn { font-size: 18px; }
+    .btn { font-size: 20px !important; }
 
     /* HERO */
     .hero__title { font-size: 128px; }
@@ -1518,7 +1518,7 @@ a { text-decoration: none; color: inherit; }
     .benefits__title { font-size: 96px; }
     .benefits__grid { grid-template-columns: repeat(4, 1fr); gap: 20px; }
     .benefit-card { width: 100%; height: 489px; }
-    .benefit-card__num { font-size: 24px; }
+    .benefit-card__num { font-size: 20px; color: #141D3A; opacity: 1; }
     .benefit-card h3 { font-size: 40px; }
     .benefit-card p { font-size: 20px; }
 
@@ -1589,8 +1589,8 @@ a { text-decoration: none; color: inherit; }
         padding-left: max(60px, calc((100% - 1520px) / 2));
         padding-right: max(60px, calc((100% - 1520px) / 2));
     }
-    .footer__info p { font-size: 23.04px; }
-    .footer__policy { font-size: 23.04px; }
+    .footer__info p { font-size: 20px; }
+    .footer__policy { font-size: 20px; }
 
     /* CASES */
     .cases { height: 1246px; }
