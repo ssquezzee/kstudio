@@ -76,7 +76,7 @@ a { text-decoration: none; color: inherit; }
     padding: 17px 36px;
     border-radius: 50px;
     font-family: var(--font-b);
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 600;
     line-height: 1;
     cursor: pointer;
@@ -1513,17 +1513,18 @@ a { text-decoration: none; color: inherit; }
     .hero { padding-bottom: 120px; }
 
     /* BENEFITS */
-    .benefits { padding-bottom: 140px; }
+    .benefits { padding: 180px 0; }
     .benefits__title { font-size: 96px; }
     .benefits__grid { grid-template-columns: repeat(4, 1fr); gap: 20px; }
     .benefit-card { width: 100%; height: 489px; }
     .benefit-card__num { font-size: 24px; }
     .benefit-card h3 { font-size: 40px; }
-    .benefit-card p { font-size: 24px; }
+    .benefit-card p { font-size: 20px; }
 
     /* TEAM */
+    .team { padding: 180px 0 260px !important; }
     .team__title { font-size: 60px; }
-    .team__desc { font-size: 24px; max-width: none; }
+    .team__desc { font-size: 20px; max-width: none; }
     .team-card__name { font-size: 40px; white-space: nowrap; }
     .team-card:nth-child(2) .team-card__name { font-size: 40px; white-space: nowrap; }
     .team-card__role { font-size: 20px; }
@@ -1540,43 +1541,45 @@ a { text-decoration: none; color: inherit; }
     .team-card:nth-child(3) .team-card__photo { width: 300px; }
 
     /* PROCESS */
-    .process { padding: 120px 0; }
+    .process { padding: 180px 0; }
     .process__title { font-size: 60px; }
     .process-card { width: 440px; height: 697px; }
     .process-card:nth-child(1),
     .process-card:nth-child(2) { height: 598px; }
     .process-card__img img { height: 280px; }
     .process-card h3 { font-size: 40px; }
-    .process-card p { font-size: 24px; }
+    .process-card p { font-size: 20px; }
     .slider-track-wrap { max-width: 1352px; flex: 0 0 1352px; }
 
     /* SERVICES */
-    .services { padding: 120px 0 180px; }
+    .services { padding: 180px 0; }
     .services__title { font-size: 64px; }
     .services-row { grid-template-columns: 460px 1fr 200px; }
     .services-row__name { font-size: 40px; }
     .services-row__desc { font-size: 20px; }
-    .services-row__meta { font-size: 24px; }
+    .services-row__meta { font-size: 20px; }
+    .services__cta .btn { height: 80px; }
 
     /* FAQ */
-    .faq { padding: 120px 0 160px; }
+    .faq { padding: 180px 0; }
     .faq__title { font-size: 64px; }
     .faq-item__btn { font-size: 20px; padding: 20px 28px; }
+    .faq-item__answer { font-size: 20px !important; }
 
     /* CONTACT */
-    .contact { padding: 120px 67px; }
+    .contact { padding: 180px 67px; }
     .contact__title { font-size: 110px; line-height: 1.0; }
     .form-agree span { font-size: 18px; }
     .ct-line.l2 { padding-left: 26%; }
     .ct-line.l3 { padding-left: 55%; }
-    .contact-form { width: 640px; }
+    .contact-form { width: 640px; gap: 16px; }
     .form-group input { height: 72px; font-size: 18px; }
     .contact-form .btn { height: 72px; font-size: 18px; }
 
     /* HEADER */
-    .header__inner { height: 70px; }
-    .nav__link { font-size: 16px; }
-    .logo__icon img { width: 131.35px; height: 45.9px; }
+    .header__inner { height: 80px; }
+    .nav__link { font-size: 20px !important; }
+    .logo__icon img { width: 160px !important; height: 56px !important; }
 
     /* FOOTER */
     .footer { padding-top: 60px; height: auto; }
