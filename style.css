@@ -76,7 +76,7 @@ a { text-decoration: none; color: inherit; }
     padding: 17px 36px;
     border-radius: 50px;
     font-family: var(--font-b);
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 600;
     line-height: 1;
     cursor: pointer;
@@ -1504,13 +1504,14 @@ a { text-decoration: none; color: inherit; }
    ============================== */
 @media (min-width: 1700px) {
     .container { max-width: 1520px; }
+    .btn { font-size: 18px; }
 
     /* HERO */
     .hero__title { font-size: 128px; }
     .hero__subtitle { font-size: 20px; }
     .hero__chip { font-size: 20px; height: 50px; }
-    .hero__cta { width: 1520px; height: 70px; margin-top: 180px; }
-    .hero { padding-bottom: 120px; }
+    .hero__cta { width: 1520px; height: 70px; margin-top: 205px; }
+    .hero { padding-top: 30px; padding-bottom: 120px; }
 
     /* BENEFITS */
     .benefits { padding: 180px 0; }
@@ -1522,7 +1523,7 @@ a { text-decoration: none; color: inherit; }
     .benefit-card p { font-size: 20px; }
 
     /* TEAM */
-    .team { padding: 180px 0 260px !important; }
+    .team { padding: 180px 0 220px !important; }
     .team__title { font-size: 60px; }
     .team__desc { font-size: 20px; max-width: none; }
     .team-card__name { font-size: 40px; white-space: nowrap; }
@@ -1552,7 +1553,7 @@ a { text-decoration: none; color: inherit; }
     .slider-track-wrap { max-width: 1352px; flex: 0 0 1352px; }
 
     /* SERVICES */
-    .services { padding: 180px 0; }
+    .services { padding: 180px 0 185px; }
     .services__title { font-size: 64px; }
     .services-row { grid-template-columns: 460px 1fr 200px; }
     .services-row__name { font-size: 40px; }
@@ -1561,7 +1562,7 @@ a { text-decoration: none; color: inherit; }
     .services__cta .btn { height: 80px; }
 
     /* FAQ */
-    .faq { padding: 180px 0; }
+    .faq { padding: 180px 0 185px; }
     .faq__title { font-size: 64px; }
     .faq-item__btn { font-size: 20px; padding: 20px 28px; }
     .faq-item__answer { font-size: 20px !important; }
@@ -1582,7 +1583,7 @@ a { text-decoration: none; color: inherit; }
     .logo__icon img { width: 160px !important; height: 56px !important; }
 
     /* FOOTER */
-    .footer { padding-top: 60px; height: auto; }
+    .footer { padding-top: 100px; height: auto; }
     .footer__logo { font-size: 500px; }
     .footer__top {
         padding-left: max(60px, calc((100% - 1520px) / 2));
